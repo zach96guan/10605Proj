@@ -1,0 +1,321 @@
+zachguan@proj-605-vm:~/SentEval-master/examples$ python2 gensen_senteval.py --prefix_1 nli_large_bothskip_parse --prefix_2 nli_large_bothskip
+#############################
+####### Parameters ##########
+Prefix 1 : nli_large_bothskip_parse 
+Prefix 2 : nli_large_bothskip 
+Pretrained Embeddings : ../../gensen-master/data/embedding/glove.840B.300d.h5 
+#############################
+Preparing task : MR 
+Loading pretrained word embeddings
+/usr/local/lib/python2.7/dist-packages/h5py/_hl/dataset.py:313: H5pyDeprecationWarning: dataset.value has been deprecated. Use dataset[()] instead.
+  "Use dataset[()] instead.", H5pyDeprecationWarning)
+Training vocab expansion on model
+Found 5292 task OOVs 
+Found 1781 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 20328 x 512
+                expected 80004 x 512
+Loading pretrained word embeddings
+Training vocab expansion on model
+Found 5292 task OOVs 
+Found 1781 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 20328 x 512
+                expected 80004 x 512
+2019-04-18 23:45:23,705 : Generating sentence embeddings
+/home/zachguan/SentEval-master/examples/gensen.py:299: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  sentences = Variable(torch.LongTensor(sentences), volatile=True)
+/home/zachguan/SentEval-master/examples/gensen.py:300: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  rev = Variable(torch.LongTensor(rev), volatile=True)
+2019-04-18 23:45:30,121 : Generated sentence embeddings
+2019-04-18 23:45:30,123 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2019-04-18 23:49:31,302 : Best param found at split 1: l2reg = 0.0001                 with score 83.24
+2019-04-18 23:53:45,344 : Best param found at split 2: l2reg = 1e-05                 with score 83.12
+2019-04-18 23:57:47,366 : Best param found at split 3: l2reg = 0.0001                 with score 83.4
+2019-04-19 00:01:59,321 : Best param found at split 4: l2reg = 1e-05                 with score 83.39
+2019-04-19 00:06:07,286 : Best param found at split 5: l2reg = 1e-05                 with score 83.75
+2019-04-19 00:10:17,898 : Best param found at split 6: l2reg = 0.0001                 with score 83.32
+2019-04-19 00:14:19,486 : Best param found at split 7: l2reg = 1e-05                 with score 83.09
+2019-04-19 00:18:28,543 : Best param found at split 8: l2reg = 1e-05                 with score 83.16
+2019-04-19 00:22:47,791 : Best param found at split 9: l2reg = 1e-05                 with score 83.56
+2019-04-19 00:27:01,938 : Best param found at split 10: l2reg = 1e-05                 with score 83.42
+Preparing task : CR 
+Found 642 task OOVs 
+Found 183 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 5678 x 512
+                expected 20328 x 512
+Found 642 task OOVs 
+Found 183 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 5678 x 512
+                expected 20328 x 512
+2019-04-19 00:27:08,984 : Generating sentence embeddings
+2019-04-19 00:27:10,725 : Generated sentence embeddings
+2019-04-19 00:27:10,726 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2019-04-19 00:28:46,895 : Best param found at split 1: l2reg = 0.0001                 with score 88.87
+2019-04-19 00:30:21,676 : Best param found at split 2: l2reg = 0.0001                 with score 88.49
+2019-04-19 00:31:52,535 : Best param found at split 3: l2reg = 1e-05                 with score 88.58
+2019-04-19 00:33:31,846 : Best param found at split 4: l2reg = 0.0001                 with score 88.93
+2019-04-19 00:35:06,125 : Best param found at split 5: l2reg = 1e-05                 with score 88.78
+2019-04-19 00:36:41,839 : Best param found at split 6: l2reg = 0.0001                 with score 89.02
+2019-04-19 00:38:11,236 : Best param found at split 7: l2reg = 1e-05                 with score 88.64
+2019-04-19 00:39:47,300 : Best param found at split 8: l2reg = 1e-05                 with score 88.96
+2019-04-19 00:41:17,232 : Best param found at split 9: l2reg = 1e-05                 with score 88.82
+2019-04-19 00:42:52,077 : Best param found at split 10: l2reg = 0.0001                 with score 89.08
+Preparing task : SUBJ 
+Found 5398 task OOVs 
+Found 1789 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 22639 x 512
+                expected 5678 x 512
+Found 5398 task OOVs 
+Found 1789 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 22639 x 512
+                expected 5678 x 512
+2019-04-19 00:42:57,386 : Generating sentence embeddings
+2019-04-19 00:43:04,001 : Generated sentence embeddings
+2019-04-19 00:43:04,002 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2019-04-19 00:47:12,640 : Best param found at split 1: l2reg = 1e-05                 with score 94.52
+2019-04-19 00:51:25,226 : Best param found at split 2: l2reg = 1e-05                 with score 94.56
+2019-04-19 00:55:35,157 : Best param found at split 3: l2reg = 1e-05                 with score 94.73
+2019-04-19 00:59:51,395 : Best param found at split 4: l2reg = 1e-05                 with score 94.61
+2019-04-19 01:03:56,595 : Best param found at split 5: l2reg = 1e-05                 with score 94.4
+2019-04-19 01:08:08,251 : Best param found at split 6: l2reg = 0.0001                 with score 94.62
+2019-04-19 01:12:18,476 : Best param found at split 7: l2reg = 1e-05                 with score 94.79
+2019-04-19 01:16:31,665 : Best param found at split 8: l2reg = 1e-05                 with score 94.56
+2019-04-19 01:20:44,869 : Best param found at split 9: l2reg = 1e-05                 with score 94.4
+2019-04-19 01:24:59,019 : Best param found at split 10: l2reg = 1e-05                 with score 94.49
+Preparing task : MPQA 
+Found 251 task OOVs 
+Found 34 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 6242 x 512
+                expected 22639 x 512
+Found 251 task OOVs 
+Found 34 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 6242 x 512
+                expected 22639 x 512
+2019-04-19 01:25:05,719 : Generating sentence embeddings
+2019-04-19 01:25:06,895 : Generated sentence embeddings
+2019-04-19 01:25:06,895 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2019-04-19 01:29:18,576 : Best param found at split 1: l2reg = 1e-05                 with score 91.42
+2019-04-19 01:33:28,678 : Best param found at split 2: l2reg = 0.0001                 with score 91.62
+2019-04-19 01:37:53,035 : Best param found at split 3: l2reg = 1e-05                 with score 91.29
+2019-04-19 01:42:09,808 : Best param found at split 4: l2reg = 1e-05                 with score 91.84
+2019-04-19 01:46:20,072 : Best param found at split 5: l2reg = 0.0001                 with score 91.33
+2019-04-19 01:50:40,819 : Best param found at split 6: l2reg = 0.0001                 with score 91.71
+2019-04-19 01:54:58,945 : Best param found at split 7: l2reg = 1e-05                 with score 91.56
+2019-04-19 01:59:21,201 : Best param found at split 8: l2reg = 0.0001                 with score 91.56
+2019-04-19 02:03:33,289 : Best param found at split 9: l2reg = 1e-05                 with score 91.62
+2019-04-19 02:07:52,224 : Best param found at split 10: l2reg = 1e-05                 with score 91.34
+Preparing task : SST2 
+Found 3908 task OOVs 
+Found 1056 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 17562 x 512
+                expected 6242 x 512
+Found 3908 task OOVs 
+Found 1056 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 17562 x 512
+                expected 6242 x 512
+2019-04-19 02:08:01,855 : Computing embedding for test
+2019-04-19 02:08:02,749 : Computed test embeddings
+2019-04-19 02:08:02,749 : Computing embedding for train
+2019-04-19 02:08:18,973 : Computed train embeddings
+2019-04-19 02:08:18,973 : Computing embedding for dev
+2019-04-19 02:08:19,346 : Computed dev embeddings
+2019-04-19 02:08:19,346 : Training pytorch-MLP-nhid0-adam-bs64 with standard validation..
+2019-04-19 02:11:00,997 : [(u'reg:1e-05', 86.7), (u'reg:0.0001', 86.35), (u'reg:0.001', 84.98), (u'reg:0.01', 83.14)]
+2019-04-19 02:11:00,998 : Validation : best param found is reg = 1e-05 with score             86.7
+2019-04-19 02:11:00,998 : Evaluating...
+Preparing task : SST5 
+Found 4614 task OOVs 
+Found 1324 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 19540 x 512
+                expected 17562 x 512
+Found 4614 task OOVs 
+Found 1324 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 19540 x 512
+                expected 17562 x 512
+2019-04-19 02:11:41,774 : Computing embedding for test
+2019-04-19 02:11:42,656 : Computed test embeddings
+2019-04-19 02:11:42,656 : Computing embedding for train
+2019-04-19 02:11:45,639 : Computed train embeddings
+2019-04-19 02:11:45,639 : Computing embedding for dev
+2019-04-19 02:11:46,236 : Computed dev embeddings
+2019-04-19 02:11:46,236 : Training pytorch-MLP-nhid0-adam-bs64 with standard validation..
+2019-04-19 02:12:06,409 : [(u'reg:1e-05', 46.32), (u'reg:0.0001', 46.05), (u'reg:0.001', 47.23), (u'reg:0.01', 44.41)]
+2019-04-19 02:12:06,410 : Validation : best param found is reg = 0.001 with score             47.23
+2019-04-19 02:12:06,410 : Evaluating...
+2019-04-19 02:12:11,890 : ***** Transfer task : TREC *****
+
+
+Preparing task : TREC 
+Found 4245 task OOVs 
+Found 217 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 9768 x 512
+                expected 19540 x 512
+Found 4245 task OOVs 
+Found 217 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 9768 x 512
+                expected 19540 x 512
+2019-04-19 02:12:15,699 : Computed train embeddings
+2019-04-19 02:12:15,798 : Computed test embeddings
+2019-04-19 02:12:15,799 : Training pytorch-MLP-nhid0-adam-bs64 with 10-fold cross-validation
+2019-04-19 02:15:19,450 : [(u'reg:1e-05', 90.3), (u'reg:0.0001', 90.08), (u'reg:0.001', 88.41), (u'reg:0.01', 82.39)]
+2019-04-19 02:15:19,450 : Cross-validation : best param found is reg = 1e-05             with score 90.3
+2019-04-19 02:15:19,450 : Evaluating...
+Preparing task : SICKRelatedness 
+Found 86 task OOVs 
+Found 4 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 2319 x 512
+                expected 9768 x 512
+Found 86 task OOVs 
+Found 4 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 2319 x 512
+                expected 9768 x 512
+2019-04-19 02:15:25,758 : Computing embedding for test
+2019-04-19 02:15:28,165 : Computed test embeddings
+2019-04-19 02:15:28,166 : Computing embedding for train
+2019-04-19 02:15:30,527 : Computed train embeddings
+2019-04-19 02:15:30,527 : Computing embedding for dev
+2019-04-19 02:15:30,851 : Computed dev embeddings
+Preparing task : SICKEntailment 
+Found 86 task OOVs 
+Found 4 pretrain OOVs 
+Found 86 task OOVs 
+Found 4 pretrain OOVs 
+2019-04-19 02:15:53,476 : Computing embedding for test
+2019-04-19 02:15:55,793 : Computed test embeddings
+2019-04-19 02:15:55,794 : Computing embedding for train
+2019-04-19 02:15:57,932 : Computed train embeddings
+2019-04-19 02:15:57,932 : Computing embedding for dev
+2019-04-19 02:15:58,244 : Computed dev embeddings
+2019-04-19 02:15:58,482 : Training pytorch-MLP-nhid0-adam-bs64 with standard validation..
+2019-04-19 02:16:11,138 : [(u'reg:1e-05', 86.0), (u'reg:0.0001', 85.8), (u'reg:0.001', 85.8), (u'reg:0.01', 85.2)]
+2019-04-19 02:16:11,138 : Validation : best param found is reg = 1e-05 with score             86.0
+2019-04-19 02:16:11,138 : Evaluating...
+2019-04-19 02:16:14,883 : ***** Transfer task : MRPC *****
+
+
+Preparing task : MRPC 
+Found 4100 task OOVs 
+Found 1659 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 17860 x 512
+                expected 2319 x 512
+Found 4100 task OOVs 
+Found 1659 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 17860 x 512
+                expected 2319 x 512
+2019-04-19 02:16:16,813 : Computing embedding for test
+2019-04-19 02:16:18,910 : Computed test embeddings
+2019-04-19 02:16:18,910 : Computing embedding for train
+2019-04-19 02:16:23,598 : Computed train embeddings
+2019-04-19 02:16:23,728 : Training pytorch-MLP-nhid0-adam-bs64 with 10-fold cross-validation
+2019-04-19 02:18:20,895 : [(u'reg:1e-05', 78.98), (u'reg:0.0001', 78.95), (u'reg:0.001', 78.41), (u'reg:0.01', 75.71)]
+2019-04-19 02:18:20,895 : Cross-validation : best param found is reg = 1e-05             with score 78.98
+2019-04-19 02:18:20,895 : Evaluating...
+Preparing task : STS14 
+Found 1086 task OOVs 
+Found 503 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 9121 x 512
+                expected 17860 x 512
+Found 1086 task OOVs 
+Found 503 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 9121 x 512
+                expected 17860 x 512
+Preparing task : STSBenchmark 
+Found 2905 task OOVs 
+Found 1142 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 15892 x 512
+                expected 9121 x 512
+Found 2905 task OOVs 
+Found 1142 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 15892 x 512
+                expected 9121 x 512
+2019-04-19 02:18:28,445 : Computing embedding for test
+2019-04-19 02:18:29,306 : Computed test embeddings
+2019-04-19 02:18:29,306 : Computing embedding for train
+2019-04-19 02:18:33,040 : Computed train embeddings
+2019-04-19 02:18:33,040 : Computing embedding for dev
+2019-04-19 02:18:34,166 : Computed dev embeddings
+Preparing task : STS12 
+Found 961 task OOVs 
+Found 326 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 8131 x 512
+                expected 15892 x 512
+Found 961 task OOVs 
+Found 326 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 8131 x 512
+                expected 15892 x 512
+Preparing task : STS13 
+Found 482 task OOVs 
+Found 190 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 5156 x 512
+                expected 8131 x 512
+Found 482 task OOVs 
+Found 190 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 5156 x 512
+                expected 8131 x 512
+Preparing task : STS15 
+Found 753 task OOVs 
+Found 271 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 7368 x 512
+                expected 5156 x 512
+Found 753 task OOVs 
+Found 271 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 7368 x 512
+                expected 5156 x 512
+Preparing task : STS16 
+Found 312 task OOVs 
+Found 139 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 3975 x 512
+                expected 7368 x 512
+Found 312 task OOVs 
+Found 139 pretrain OOVs 
+
+                Warning pretrained embedding shape mismatch 3975 x 512
+                expected 7368 x 512
+--------------------------------------------
+Table 2 of Our Paper : 
+--------------------------------------------
+MR                [Dev:83.3/Test:82.7]
+CR                [Dev:88.8/Test:87.6]
+SUBJ              [Dev:94.6/Test:94.1]
+MPQA              [Dev:91.5/Test:91.1]
+SST2              [Dev:86.7/Test:83.2]
+SST5              [Dev:47.2/Test:46.1]
+TREC              [Dev:90.3/Test:93.0]
+MRPC              [Dev:79.0/TestAcc:78.2/TestF1:84.3]
+SICKRelatedness   [Dev:0.890/Test:0.888]
+SICKEntailment    [Dev:86.0/Test:87.8]
+STS12             [Pearson:0.609/Spearman:0.610]
+STS13             [Pearson:0.543/Spearman:0.552]
+STS14             [Pearson:0.653/Spearman:0.639]
+STS15             [Pearson:0.739/Spearman:0.741]
+STS16             [Pearson:0.671/Spearman:0.674]
+STSBenchmark      [Dev:0.81124/Pearson:0.78561/Spearman:0.78881]
+--------------------------------------------
